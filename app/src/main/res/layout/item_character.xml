@@ -13,7 +13,8 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_weight="0.5"
-        android:text="1 lugar"></TextView>
+        android:text="1 lugar"
+    />
 
 
     <TextView
@@ -23,7 +24,8 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_weight="0.5"
-        android:text="2 lugar"></TextView>
+        android:text="2 lugar"
+    />
 
     <TextView
         android:id="@+id/tvCulture"
@@ -33,6 +35,6 @@
         android:layout_marginTop="4dp"
         android:layout_weight="0.5"
         android:inputType="date"
-        android:text="3 lugar"></TextView>
+    />
 
 </LinearLayout>

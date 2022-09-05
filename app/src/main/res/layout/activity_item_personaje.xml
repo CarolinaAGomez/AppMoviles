@@ -10,4 +10,103 @@
         android:id="@+id/tbTittle"
         layout="@layout/principal_toolbar" />
 
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_weight="0.5"
+        android:text="Name: "
+        />
+
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_weight="0.5"
+        android:text="Gender: "
+        />
+
+    <TextView
+        android:id="@+id/tvCulture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_weight="0.5"
+        android:text="Culture: "
+        />
+
+    <TextView
+        android:id="@+id/tvBorn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_weight="0.5"
+        android:text="Born: "
+        />
+
+    <TextView
+        android:id="@+id/tvDied"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_weight="0.5"
+        android:text="Died: "
+        />
+
+    <TextView
+        android:id="@+id/tvTitles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_weight="0.5"
+        android:text="Titles: "
+        />
+
+    <TextView
+        android:id="@+id/tvFather"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_weight="0.5"
+        android:text="Father: "
+        />
+
+    <TextView
+        android:id="@+id/tvMother"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_weight="0.5"
+        android:text="Mother: "
+        />
+
+    <TextView
+        android:id="@+id/tvSpouse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_weight="0.5"
+        android:text="Spouse: "
+        />
+
+    <TextView
+        android:id="@+id/tvTvSeries"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_weight="0.5"
+        android:text="TvSeries: "
+        />
+
+    <TextView
+        android:id="@+id/tvPlayedBy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_weight="0.5"
+        android:text="PlayedBy: "
+        />
 </LinearLayout>

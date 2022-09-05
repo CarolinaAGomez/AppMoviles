@@ -1,8 +1,9 @@
 package com.UNLa.primeraentrega_tallerdeaplicacionesmoviles;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Character {
+public class Character implements Serializable {
 
     private int id;
     private String url;
@@ -12,7 +13,6 @@ public class Character {
     private String born;
     private String died;
     private List<String> titles;
-
     private String father;
     private String mother;
     private String spouse;

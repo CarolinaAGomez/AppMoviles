@@ -36,7 +36,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClickListener(Character character) {
                 Intent mainActivityToItemCharacter = new Intent(MainActivity.this, ItemCharacterActivity.class);
-                Toast.makeText(MainActivity.this, character.getName(), Toast.LENGTH_SHORT).show();
+                mainActivityToItemCharacter.putExtra("character", character);
+                startActivity(mainActivityToItemCharacter);
+                finish();
+                //Toast.makeText(MainActivity.this, character.getName(), Toast.LENGTH_SHORT).show();
             }
         });
         recyclerView.setAdapter(characterAdapter);
