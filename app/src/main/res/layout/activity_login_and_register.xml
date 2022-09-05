@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/prueba3"
     android:orientation="vertical"
     tools:context=".LoginAndRegisterActivity">
 
     <include
         android:id="@+id/tbTittle"
-        layout="@layout/principal_toolbar"/>
+        layout="@layout/principal_toolbar" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Ingrese nombre"
+        android:textColor="@color/white"
         android:textSize="10pt" />
 
     <EditText
@@ -23,6 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ingrese nombre"
+        android:textColor="#00CC00"
+        android:textColorHint="#00CC00"
         android:textStyle="italic"></EditText>
 
     <TextView
@@ -30,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Ingrese Contraseña"
+        android:textColor="@color/white"
         android:textSize="10pt" />
 
     <EditText
@@ -38,6 +43,8 @@
         android:layout_height="wrap_content"
         android:hint="Ingrese contraseña"
         android:inputType="textPassword"
+        android:textColor="#00CC00"
+        android:textColorHint="#00CC00"
         android:textStyle="italic"></EditText>
 
     <CheckBox
@@ -45,7 +52,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Recordar usuario" />
+        android:text="Recordar usuario"
+        android:textColor="@color/white" />
 
     <LinearLayout
         android:layout_width="match_parent"

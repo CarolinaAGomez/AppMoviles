@@ -29,9 +29,9 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.Char
 
     @Override
     public void onBindViewHolder(@NonNull CharacterViewHolder holder, int position) {
-        holder.name.setText(characters.get(position).getName());  //ACa segun la posicion trae el elemento.
-        holder.gender.setText(characters.get(position).getGender());
-        holder.culture.setText(characters.get(position).getCulture());
+        holder.name.setText("Nombre:" + characters.get(position).getName());  //ACa segun la posicion trae el elemento.
+        holder.gender.setText("Genero:" + characters.get(position).getGender());
+        holder.culture.setText("Cultura:" + characters.get(position).getCulture());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,12 +50,14 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.Char
         TextView name;
         TextView gender;
         TextView culture;
+        TextView espacio;
 
         public CharacterViewHolder(@NonNull View itemView) {
             super(itemView);
             this.name = itemView.findViewById(R.id.tvName);
             this.gender = itemView.findViewById(R.id.tvGender);
             this.culture = itemView.findViewById(R.id.tvCulture);
+            this.espacio = itemView.findViewById(R.id.tvEspacio);
         }
     }
 

@@ -19,28 +19,16 @@ public class Character implements Serializable {
     private List<String> tvSeries;
     private String playedBy;
 
-    public Character(int id, String url, String name, String gender, String culture, String born, String died, List<String> titles, String father, String mother, String spouse, List<String> tvSeries, String playedBy) {
+    public Character(int id, String name, String gender, String culture, String born, String died) {
         this.id = id;
-        this.url = url;
         this.name = name;
         this.gender = gender;
         this.culture = culture;
         this.born = born;
         this.died = died;
-        this.titles = titles;
-        this.father = father;
-        this.mother = mother;
-        this.spouse = spouse;
-        this.tvSeries = tvSeries;
-        this.playedBy = playedBy;
+
     }
 
-    public Character(int id, String name, String gender, String culture) {
-        this.id = id;
-        this.name = name;
-        this.gender = gender;
-        this.culture = culture;
-    }
 
     public Character() {
     }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,8 +17,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="4dp"
         android:layout_weight="0.5"
-        android:text="Name: "
-        />
+        android:text="Name: " />
 
 
     <TextView
@@ -26,8 +26,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="4dp"
         android:layout_weight="0.5"
-        android:text="Gender: "
-        />
+        android:text="Gender: " />
 
     <TextView
         android:id="@+id/tvCulture"
@@ -35,8 +34,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="4dp"
         android:layout_weight="0.5"
-        android:text="Culture: "
-        />
+        android:text="Culture: " />
 
     <TextView
         android:id="@+id/tvBorn"
@@ -44,8 +42,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="4dp"
         android:layout_weight="0.5"
-        android:text="Born: "
-        />
+        android:text="Born: " />
 
     <TextView
         android:id="@+id/tvDied"
@@ -53,8 +50,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="4dp"
         android:layout_weight="0.5"
-        android:text="Died: "
-        />
+        android:text="Died: " />
 
     <TextView
         android:id="@+id/tvTitles"
@@ -62,8 +58,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="4dp"
         android:layout_weight="0.5"
-        android:text="Titles: "
-        />
+        android:text="Titles: " />
 
     <TextView
         android:id="@+id/tvFather"
@@ -71,8 +66,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="4dp"
         android:layout_weight="0.5"
-        android:text="Father: "
-        />
+        android:text="Father: " />
 
     <TextView
         android:id="@+id/tvMother"
@@ -80,8 +74,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="4dp"
         android:layout_weight="0.5"
-        android:text="Mother: "
-        />
+        android:text="Mother: " />
 
     <TextView
         android:id="@+id/tvSpouse"
@@ -89,8 +82,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="4dp"
         android:layout_weight="0.5"
-        android:text="Spouse: "
-        />
+        android:text="Spouse: " />
 
     <TextView
         android:id="@+id/tvTvSeries"
@@ -98,8 +90,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="4dp"
         android:layout_weight="0.5"
-        android:text="TvSeries: "
-        />
+        android:text="TvSeries: " />
 
     <TextView
         android:id="@+id/tvPlayedBy"
@@ -107,6 +98,15 @@
         android:layout_height="match_parent"
         android:layout_marginStart="4dp"
         android:layout_weight="0.5"
-        android:text="PlayedBy: "
-        />
+        android:text="PlayedBy: " />
+
+    <Button
+        android:id="@+id/btVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#FF6600"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Volver"
+        app:cornerRadius="30dp"></Button>
 </LinearLayout>

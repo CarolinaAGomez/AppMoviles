@@ -39,14 +39,12 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-
     private void confirmarUsuario() {
-        confirmarUsuario.setText("Se registro el usuario correctamente");
         Bundle bundle = getIntent().getExtras(); //Llama a todos los bundles de las clases que tienen extras como el usuario.
 
         if (bundle != null) {
             String usuario = bundle.getString("usuario");
-            Toast.makeText(RegisterActivity.this, "Bienvenida/o usuario" + usuario, Toast.LENGTH_SHORT).show();
+            confirmarUsuario.setText("Usuario " + usuario + " registrado correctamente");
         }
     }
 }
