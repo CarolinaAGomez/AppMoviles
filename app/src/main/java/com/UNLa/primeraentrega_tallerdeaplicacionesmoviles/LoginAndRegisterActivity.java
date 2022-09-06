@@ -43,8 +43,8 @@ public class LoginAndRegisterActivity extends AppCompatActivity {
                     Toast.makeText(LoginAndRegisterActivity.this, "Ingrese los datos solicitados", Toast.LENGTH_LONG).show();
                 } else {
                     Intent loginToMenu = new Intent(LoginAndRegisterActivity.this, MainActivity.class);
-                    startActivity(loginToMenu);
                     loginToMenu.putExtra("usuario", usuario); //un bundle puede llamar a este extra identificado como usuario.
+                    startActivity(loginToMenu);
                     finish();
                 }
 
@@ -62,8 +62,8 @@ public class LoginAndRegisterActivity extends AppCompatActivity {
                     Toast.makeText(LoginAndRegisterActivity.this, "Ingrese los datos solicitados", Toast.LENGTH_LONG).show();
                 } else {
                     Intent loginAndRegisterToRegister = new Intent(LoginAndRegisterActivity.this, RegisterActivity.class);
-                    startActivity(loginAndRegisterToRegister);
                     loginAndRegisterToRegister.putExtra("usuario", usuario); //un bundle puede llamar a este extra identificado como usuario.
+                    startActivity(loginAndRegisterToRegister);
                     finish();
                 }
             }

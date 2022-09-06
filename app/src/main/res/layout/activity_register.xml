@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:background="@drawable/prueba3">
 
 
     <include
@@ -16,15 +17,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="@color/black"
-        android:textSize="20dp"></TextView>
+        android:textSize="20dp"
+        android:textColor="#00CC00"></TextView>
 
     <Button
         android:id="@+id/btBackLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Volver al Login"></Button>
+        android:backgroundTint="#FF6600"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Volver al Login"
+        android:layout_marginTop="200dp"></Button>
 
 
 </LinearLayout>

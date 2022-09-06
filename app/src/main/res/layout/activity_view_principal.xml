@@ -10,7 +10,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/androidimage"></ImageView>
+        android:src="@drawable/prueba2"
+        android:scaleType="centerCrop"></ImageView>
 
     <TextView
         android:id="@+id/tvPrincipal"
@@ -19,7 +20,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="60dp"
         android:text="Taller de Aplicaciones Moviles"
-        android:textColor="#006600"
+        android:textColor="#00CC00"
         android:textSize="10pt"
        ></TextView>
 
@@ -27,18 +28,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="75dp"
         android:text="Alumnos: Seba Crespi - Caro Gomez"
-        android:textColor="#006600"
-        android:textSize="6pt"></TextView>
+        android:textColor="#00CC00"
+        android:textSize="8pt"></TextView>
 
     <Button
         android:id="@+id/btPrincipal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="200dp"
-        android:backgroundTint="#DDDDDD"
+        android:layout_marginTop="250dp"
+        android:backgroundTint="#000"
         app:cornerRadius="30dp"
         android:textColor="#00CC00"
         android:text="Ingresar a la aplicacion"></Button>

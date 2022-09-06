@@ -13,7 +13,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_weight="0.5"
-        android:text="1 lugar"></TextView>
+        android:text="Nombre" />
 
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_weight="0.5"
-        android:text="2 lugar"></TextView>
+        android:text="Genero" />
 
     <TextView
         android:id="@+id/tvCulture"
@@ -32,7 +32,13 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_weight="0.5"
-        android:inputType="date"
-        android:text="3 lugar"></TextView>
+        android:text="Cultura" />
 
+    <TextView
+        android:id="@+id/tvEspacio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="0.5" />
 </LinearLayout>
