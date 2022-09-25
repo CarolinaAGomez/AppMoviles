@@ -30,5 +30,15 @@
         android:text="Volver al Login"
         android:layout_marginTop="200dp"></Button>
 
+    <Button
+        android:id="@+id/btUsuariosRegistrados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#FF6600"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Ver usuarios registrados"
+        android:layout_marginTop="300dp"></Button>
+
 
 </LinearLayout>

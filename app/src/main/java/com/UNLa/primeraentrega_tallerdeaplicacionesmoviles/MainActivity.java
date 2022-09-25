@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         btSalir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent itemCharacterToMenuActivity = new Intent(MainActivity.this, LoginAndRegisterActivity.class);
+                Intent itemCharacterToMenuActivity = new Intent(MainActivity.this, ViewPrincipalActivity.class);
                 startActivity(itemCharacterToMenuActivity);
                 finish();
             }

@@ -25,10 +25,14 @@ public class ViewPrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent viewPrincipalToLoginAndRegister = new Intent(ViewPrincipalActivity.this, LoginAndRegisterActivity.class);
+               /* SharedPreferences credentials = getApplicationContext().getSharedPreferences(Constantes.SP_CREDENTIAL, MODE_PRIVATE);
+                SharedPreferences.Editor editor = credentials.edit();
+                editor.putString(Constantes.USUARIO, null);
+                editor.putString(Constantes.PASSWORD, null);
+                editor.apply();*/
                 startActivity(viewPrincipalToLoginAndRegister);
             }
         });
     }
-
 
 }
