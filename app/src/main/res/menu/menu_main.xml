@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+   >
+    <item
+        android:id="@+id/item_main_characters"
+        android:title="Personajes Principales"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:showAsAction="never"
+    />
+    <item
+        android:id="@+id/item_house"
+        android:title="Casas"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/item_logout"
+        android:title="Cerrar Sesión"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:showAsAction="never"
+        />
+</menu>

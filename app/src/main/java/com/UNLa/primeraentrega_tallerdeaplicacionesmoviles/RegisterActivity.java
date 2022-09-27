@@ -5,15 +5,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RegisterActivity extends AppCompatActivity {
 
     TextView confirmarUsuario;
-    Button backLogin;
+    Button backLogin, btUsuariosRegistrados;
     Toolbar my_toolbar;
 
     @Override
@@ -23,6 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         confirmarUsuario = findViewById(R.id.tvConfirmarUsuario);
         backLogin = findViewById(R.id.btBackLogin);
+        btUsuariosRegistrados = findViewById(R.id.btUsuariosRegistrados);
 
         my_toolbar = findViewById(R.id.tbTittle);
         setSupportActionBar(my_toolbar);
@@ -35,6 +38,14 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent registerAndLoginAndRegister = new Intent(RegisterActivity.this, LoginAndRegisterActivity.class);
                 startActivity(registerAndLoginAndRegister);
+            }
+        });
+
+        btUsuariosRegistrados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent registerToUsarios = new Intent(RegisterActivity.this, UsuariosRegistrados.class);
+                startActivity(registerToUsarios);
             }
         });
     }
