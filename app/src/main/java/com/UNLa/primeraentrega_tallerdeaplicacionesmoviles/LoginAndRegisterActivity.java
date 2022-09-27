@@ -12,6 +12,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import java.sql.SQLException;
+
 public class LoginAndRegisterActivity extends AppCompatActivity {
 
     EditText etUsuario, etPassword;
@@ -50,12 +52,23 @@ public class LoginAndRegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String usuario = etUsuario.getText().toString();
                 String password = etPassword.getText().toString();
-
                 if (usuario.isEmpty() || password.isEmpty()) {
                     Toast.makeText(LoginAndRegisterActivity.this, "Ingrese los datos solicitados", Toast.LENGTH_LONG).show();
-                } else {
-                    loginPrimeraVezConCheckBoxActivado(usuario, password);
+                }else{
+                    try {
+                        Usuario user = UsuarioManager.getInstancia(LoginAndRegisterActivity.this).getUsuario(usuario);
+                        if(user.contrasena.equals(password)){
+                            loginPrimeraVezConCheckBoxActivado(usuario, password);
+                        }
+                        else {
+                            System.out.println("hola");
+                            Toast.makeText(LoginAndRegisterActivity.this, "Usuario o contraseña incorrectos", Toast.LENGTH_LONG).show();
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
+
             }
         });
 

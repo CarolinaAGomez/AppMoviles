@@ -1,6 +1,7 @@
 package com.UNLa.primeraentrega_tallerdeaplicacionesmoviles;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,11 +26,6 @@ public class ViewPrincipalActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent viewPrincipalToLoginAndRegister = new Intent(ViewPrincipalActivity.this, LoginAndRegisterActivity.class);
-               /* SharedPreferences credentials = getApplicationContext().getSharedPreferences(Constantes.SP_CREDENTIAL, MODE_PRIVATE);
-                SharedPreferences.Editor editor = credentials.edit();
-                editor.putString(Constantes.USUARIO, null);
-                editor.putString(Constantes.PASSWORD, null);
-                editor.apply();*/
                 startActivity(viewPrincipalToLoginAndRegister);
             }
         });

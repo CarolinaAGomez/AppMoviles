@@ -39,10 +39,13 @@ public class UsuarioManager {
         UsuarioManager.instancia = instancia;
     }
 
-
     //Trae a todos los usuarios
     public List<Usuario> getUsuarios() throws Exception {
         return dao.queryForAll();
+    }
+
+    public Usuario getUsuario(String usuario) throws SQLException {
+        return dao.queryForId(usuario);
     }
 
     //Nuevo usuario
@@ -50,7 +53,7 @@ public class UsuarioManager {
         dao.create(usuario);
     }
 
-    public void deleteUsuario(List<Usuario> usuario) throws SQLException {
+    public void deleteUsuario(Usuario usuario) throws SQLException {
         dao.delete(usuario);
     }
 
