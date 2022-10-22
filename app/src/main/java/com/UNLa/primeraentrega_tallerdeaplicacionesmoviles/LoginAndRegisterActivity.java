@@ -54,6 +54,16 @@ public class LoginAndRegisterActivity extends AppCompatActivity {
                 String password = etPassword.getText().toString();
                 if (usuario.isEmpty() || password.isEmpty()) {
                     Toast.makeText(LoginAndRegisterActivity.this, "Ingrese los datos solicitados", Toast.LENGTH_LONG).show();
+                } else {
+                    Intent loginToMenu = new Intent(LoginAndRegisterActivity.this, MainActivity2.class);//aca cambie
+                    loginToMenu.putExtra("usuario", usuario); //un bundle puede llamar a este extra identificado como usuario.
+                    startActivity(loginToMenu);
+                    finish();
+                    loginPrimeraVezConCheckBoxActivado(usuario, password);
+                }}});
+
+                /*if (usuario.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(LoginAndRegisterActivity.this, "Ingrese los datos solicitados", Toast.LENGTH_LONG).show();
                 }else{
                     try {
                         Usuario user = UsuarioManager.getInstancia(LoginAndRegisterActivity.this).getUsuario(usuario);
@@ -70,7 +80,7 @@ public class LoginAndRegisterActivity extends AppCompatActivity {
                 }
 
             }
-        });
+        });*/
 
 
         btRegistrar.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +112,7 @@ public class LoginAndRegisterActivity extends AppCompatActivity {
     //Esto se llama cuando es usuario esta guardado o cuando no esta guardado pero tmp quiero guardarlo con el checkbok.
     private void iniciarMainActivity(String usuario) {
         Intent loginToList = new Intent(LoginAndRegisterActivity.this,
-                MainActivity.class);
+                MainActivity2.class);
         loginToList.putExtra(Constantes.USUARIO, usuario); //un bundle puede llamar a este extra identificado como usuario.
         startActivity(loginToList);
         finish();

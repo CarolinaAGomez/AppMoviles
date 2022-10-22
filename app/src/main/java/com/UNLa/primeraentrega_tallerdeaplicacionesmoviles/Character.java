@@ -29,6 +29,11 @@ public class Character implements Serializable {
 
     }
 
+    public Character(String name, String gender, String culture) {
+        this.name = name;
+        this.gender = gender;
+        this.culture = culture;
+    }
 
     public Character() {
     }

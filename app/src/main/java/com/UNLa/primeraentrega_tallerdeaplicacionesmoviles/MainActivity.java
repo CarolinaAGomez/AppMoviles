@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -36,20 +35,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu (Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
-    public boolean onOptionsItemSelected (MenuItem item){
-        if(item.getItemId() == R.id.item_main_characters){
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.item_main_characters) {
             Toast.makeText(this, "Ya estás en esta pestaña", Toast.LENGTH_SHORT).show();
         }
-        if(item.getItemId() == R.id.item_house){
+        if (item.getItemId() == R.id.item_house) {
             Toast.makeText(this, "Casas", Toast.LENGTH_SHORT).show();
         }
-        if(item.getItemId() == R.id.item_logout){
+        if (item.getItemId() == R.id.item_logout) {
             Intent itemCharacterToMenuActivity = new Intent(MainActivity.this, ViewPrincipalActivity.class);
             startActivity(itemCharacterToMenuActivity);
             SharedPreferences credentials = getApplicationContext().getSharedPreferences(Constantes.SP_CREDENTIAL, MODE_PRIVATE);
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
         return super.onOptionsItemSelected(item);
-   }
+    }
 
     private void setupAdapter() {
         recyclerView = findViewById(R.id.rvReclyclerMain);
