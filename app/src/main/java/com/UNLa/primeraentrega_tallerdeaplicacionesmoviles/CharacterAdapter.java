@@ -8,11 +8,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder> {
 
-    List<Character> characters;
+    List<Character> characters = new ArrayList<>();
     OnItemClickListener onItemClickListener;
 
     public CharacterAdapter(List<Character> characters, OnItemClickListener onItemClickListener) {

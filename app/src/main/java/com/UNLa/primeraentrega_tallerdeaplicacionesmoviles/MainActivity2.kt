@@ -9,8 +9,13 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity2 : AppCompatActivity() {
@@ -18,7 +23,6 @@ class MainActivity2 : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView
     var characterAdapter: CharacterAdapter? = null
     var my_toolbar: Toolbar? = null
-    var btSalir: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,45 +64,66 @@ class MainActivity2 : AppCompatActivity() {
         var respuesta: MutableList<Character> = mutableListOf()
 
         val api = RetroFitClient.retrofit.create(MyApi::class.java)
-        api.getCharacters()
-            .enqueue(object :  //este clientretrofit va a la calse retroclient y llama al metodo getexamen
-                retrofit2.Callback<List<CharacterApiRest>> {
+        lifecycleScope.launch {
+            withContext(Dispatchers.IO) {
+                Log.e("TODO", Thread.currentThread().name);
+                api.getCharacters()
+                    .enqueue(object :  //este clientretrofit va a la calse retroclient y llama al metodo getCharacters
+                        Callback<List<CharacterApiRest>> {
 
-                override fun onResponse(
-                    call: Call<List<CharacterApiRest>>,
-                    response: Response<List<CharacterApiRest>> //LO que devuelve el metodo retrofit geexamen
-                ) {
-                    val characterRest = response.body()
-                    characterRest?.forEach {
-                        if (it.name == null && it.culture == null) {
-                            Log.e("TODO", "name is null");
-                        } else {
-                            //  characterRest?.forEach {
-                            val charac = Character(it.name, it.gender, it.culture)
-                            respuesta.add(charac);
+                        override fun onResponse(
+                            call: Call<List<CharacterApiRest>>,
+                            response: Response<List<CharacterApiRest>> //LO que devuelve el metodo retrofit getCharacters
+                        ) {
+                            val characterRest = response.body()
+                            characterRest?.forEach {
+                                if (it.name.isNullOrEmpty() && it.culture.isNullOrEmpty() || (it.name.isNullOrEmpty())) {
+                                    Log.e("TODO", "Alguna Variable es nula")
+                                } else {
+                                    val charac = Character(
+                                        it.id,
+                                        it.name,
+                                        it.gender,
+                                        it.culture,
+                                        it.born,
+                                        it.died,
+                                        it.father,
+                                        it.mother,
+                                        it.spouse
+                                    )
+                                    respuesta.add(charac);
+                                }
+                            }
+                            recyclerView = findViewById(R.id.rvReclyclerMain)
+                            CharacterAdapter(respuesta) { c ->
+                                c.name?.let {
+                                    startActivity(
+                                        Intent(
+                                            this@MainActivity2,
+                                            ItemCharacterActivity::class.java
+                                        ).putExtra("character", c)
+                                    );
+                                    Toast.makeText(
+                                        this@MainActivity2,
+                                        c.name,
+                                        Toast.LENGTH_LONG
+                                    ).show();
+
+                                }
+                            }.let {
+                                recyclerView.adapter = it;
+                            }
                         }
-                    }
-                    recyclerView = findViewById(R.id.rvReclyclerMain)
-                    CharacterAdapter(respuesta) { c ->
-                        c.name?.let {
-                            Toast.makeText(
-                                this@MainActivity2,
-                                "mensaje",
-                                Toast.LENGTH_LONG
-                            ).show();
+
+                        override fun onFailure(
+                            call: Call<List<CharacterApiRest>>,
+                            t: Throwable
+                        ) {
+                            Log.e("REST", t.message ?: "");
                         }
-                    }.let {
-                        recyclerView.adapter = it;
-                    }
-                }
 
-                override fun onFailure(
-                    call: Call<List<CharacterApiRest>>,
-                    t: Throwable
-                ) {
-                    Log.e("REST", t.message ?: "");
-                }
-
-            })
+                    })
+            }
+        }
     }
 }

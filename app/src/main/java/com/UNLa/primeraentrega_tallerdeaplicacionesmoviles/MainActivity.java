@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(my_toolbar);
         getSupportActionBar().setTitle("Lista de personajes");
 
-        setupAdapter();
+      //  setupAdapter();
     }
 
     @Override
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
+  /*  @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.item_main_characters) {
             Toast.makeText(this, "Ya estás en esta pestaña", Toast.LENGTH_SHORT).show();
@@ -82,5 +82,5 @@ public class MainActivity extends AppCompatActivity {
         characters.add(new Character(55, "Aemond Targaryen", "Male", "Valyrian", "In 110 AC", "In 130 AC"));
         characters.add(new Character(1527, "Jaehaera Targaryen", "Female", "Valyrian", "In 123 AC", "In 133 AC"));
         return characters;
-    }
+    }*/
 }
